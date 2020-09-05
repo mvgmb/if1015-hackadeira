@@ -9,23 +9,23 @@ const rl = readline.createInterface({
 });
 
 const server = net.createServer(socket => {
-  console.log('connected to ' + host + ':' + port);
+  console.log('connected to client');
+  rl.prompt(true);
 
   rl.addListener('line', line => {
-    if (line === ':q') {
-      socket.destroy();
-    }
-
     socket.write(line);
-    console.log('you > ' + line);
+    rl.prompt(true);
   });
 
   socket.on('data', data => {
-    console.log('client > ' + data.toString());
+    readline.cursorTo(process.stdout, 0);
+    console.log('client> ' + data.toString());
+    rl.prompt(true);
   });
 
   socket.on('end', () => {
-    console.log('disconnected from ' + host + ':' + port);
+    console.log('disconnected from client');
+    process.exit();
   });
 });
 

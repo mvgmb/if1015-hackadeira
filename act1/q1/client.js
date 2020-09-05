@@ -11,25 +11,22 @@ const rl = readline.createInterface({
 const client = new net.Socket();
 
 client.connect(port, host, () => {
-  console.log('connected to ' + host + ':' + port);
+  console.log('connected to server');
+  rl.prompt(true);
 
   rl.addListener('line', line => {
-    if (line === ':q') {
-      client.destroy();
-      console.log('>> chat ended <<');
-      process.exit();
-    }
-
     client.write(line);
-    console.log('you > ' + line);
+    rl.prompt(true);
   });
 });
 
 client.on('data', data => {
-  console.log('server > ' + data);
+  readline.cursorTo(process.stdout, 0);
+  console.log('server> ' + data.toString());
+  rl.prompt(true);
 });
 
 client.on('close', () => {
-  console.log('>> chat ended <<');
+  console.log('disconnected from server');
   process.exit();
 });
