@@ -7,6 +7,11 @@ Simple calculator implementation using tcp and udp.
 Choose one of the implementations and follow these steps:
 
 ```bash
+# choose implementation by running either
+cd udp
+# or
+cd tcp
+
 # start the server
 node server.js
 
