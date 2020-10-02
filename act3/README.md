@@ -1,4 +1,4 @@
-# udp and tcp client-server calculator with protocols
+# udp and tcp client-server calculator with custom protocol
 
 Simple calculator implementation using tcp, udp and custom protocol.
 
