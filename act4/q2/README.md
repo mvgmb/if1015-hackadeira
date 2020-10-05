@@ -3,6 +3,9 @@
 ## how to use
 
 ```bash
+# install dependencies
+yarn install
+
 # start server
 node server.js
 
