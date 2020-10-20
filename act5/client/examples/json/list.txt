@@ -1,0 +1,10 @@
+{
+  "name": "name text",
+  "reminders": [
+    {
+      "id": "3",
+      "description": "description text",
+      "done": true
+    }
+  ]
+}

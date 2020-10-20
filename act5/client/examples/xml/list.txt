@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <name>name text</name>
+  <reminders>
+    <id>3</id>
+    <description>description text</description>
+    <done>true</done>
+  </reminders>
+</root>
