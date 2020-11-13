@@ -1,0 +1,20 @@
+syntax = "proto3";
+ 
+package voltagePackage;
+ 
+service Voltage {
+    rpc write(WriteRequest) returns (WriteResponse){}
+}
+ 
+message WriteRequest {
+    int32 voltage = 1;
+}
+
+message WriteResponse {
+    Status status = 1;
+}
+
+message Status {
+    int32 code = 1;
+    string message = 2;
+}
