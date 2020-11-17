@@ -3,6 +3,9 @@
 ## how to use
 
 ```bash
+# start rabbitmqserver
+rabbitmq-server
+
 # install dependencies
 yarn install
 
@@ -13,4 +16,4 @@ node consumer.js
 node producer.js "request message"
 ```
 
-To approve requests go to "localhost:8080/requests".
+To approve requests open "./client.html" in a browser.
