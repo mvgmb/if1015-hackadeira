@@ -20,7 +20,7 @@ amqp.connect('amqp://localhost', (err, connection) => {
     channel.assertQueue(queue, { durable: true });
 
     const next = msg => {
-      if (105 <= msg <= 120) {
+      if (105 <= msg && msg <= 120) {
         console.log(`undesirable voltage: ${msg}`);
         channel.sendToQueue(queue, Buffer.from(`${msg}`), { persistent: true });
       }

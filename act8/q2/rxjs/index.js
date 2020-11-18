@@ -6,7 +6,7 @@ const { Subject } = require('rxjs');
 const StartGrpcServer = require('./grpc');
 const amqp = require('amqplib/callback_api');
 
-const isUndesirableVoltage = voltage => 105 <= voltage <= 120;
+const isUndesirableVoltage = voltage => 105 <= voltage && voltage <= 120;
 
 const webSocketSubject = webSocket({
   url: 'ws://localhost:8081/randomVoltage',

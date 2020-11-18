@@ -23,7 +23,7 @@ node index.js
 ```bash
 # terminal 3
 
-cd producers/grpc
+cd rxjs
 yarn install
 node index.js
 ```
@@ -31,7 +31,7 @@ node index.js
 ```bash
 # terminal 4
 
-cd rxjs
+cd producers/grpc
 yarn install
 node index.js
 ```
